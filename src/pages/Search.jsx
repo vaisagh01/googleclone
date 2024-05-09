@@ -45,9 +45,9 @@ function Search() {
 
       {/* Searched Results Appear here */}
       {
-        term &&
+        query &&
         <div className='results'>
-          <p className='search-information'>About {data?.searchInformation.formattedTotalResults} results in ({data?.searchInformation.formattedSearchTime}s) for {term}</p>
+          <p className='search-information'>About {data?.searchInformation.formattedTotalResults} results in ({data?.searchInformation.formattedSearchTime}s) for {query}</p>
           {
             data?.items.map((item) => {
               return <SearchResults item={item} />

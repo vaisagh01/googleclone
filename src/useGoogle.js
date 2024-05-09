@@ -24,10 +24,10 @@ const useGoogleSearch = (query) => {
       }
     };
 
-    if (term) { 
+    if (query) { 
       fetchData();
     }
-  }, [term]);
+  }, [query]);
 
   return { data };
 };
