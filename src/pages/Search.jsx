@@ -10,7 +10,7 @@ import GoogleApps from '../components/GoogleApps'
 
 function Search() {
   const [query, setQuery] = useState("");
-  const {data} = useGoogleSearch(term);
+  const {data} = useGoogleSearch(query);
 
   return (
     <div className='main'>

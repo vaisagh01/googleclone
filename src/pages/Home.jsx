@@ -9,7 +9,7 @@ import useGoogleSearch from '../useGoogle'
 
 function Home() {
   const [query, setQuery] = useState(""); //search term/query
-  const {data} = useGoogleSearch(term); //main data from google api
+  const {data} = useGoogleSearch(query); //main data from google api
 
     return (
     <div className='container'>
