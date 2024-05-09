@@ -1,0 +1,60 @@
+*{
+    font-family: poppins;
+}
+
+.home-main > p > span {
+    color: red;
+}
+.home-main{
+    min-height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home-main > p, section {
+    margin-bottom: 19px;
+}
+.google-icon{
+    width: 200px;
+}
+.home-main > p{
+    font-size: 10px;
+}
+section{
+    display: flex;
+    font-size: 10px;
+}
+section ul{
+    display: flex;
+    gap: 4px;
+}
+section ul li{
+    list-style: none;
+}
+section ul li a{
+    text-decoration: none;
+}
+section p{
+    color: gray;
+    margin-right: 5px;
+}
+.buttons{
+    padding: 4px;
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    
+}
+.buttons > button{
+    padding: 8px;
+    border: none;
+    background: transparent;
+    color: rgb(52, 52, 52);
+    font-size: 11px;
+    border-radius: 5px;
+    cursor: poi;
+}
+.buttons > button:hover {
+    box-shadow: 0px 0px 2px gray;
+}

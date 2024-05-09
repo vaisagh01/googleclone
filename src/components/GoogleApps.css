@@ -1,0 +1,29 @@
+.dropdown-grid{
+    background: rgb(233, 233, 233);
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 19px;
+    position: absolute;
+    right: 40px;
+    padding: 10px;
+    border: 6px solid rgb(208, 208, 208);
+}
+.dropdown-grid > *{
+    padding: 14px;
+    border-radius: 10px;
+}
+.dropdown-grid > *:hover{
+    background: rgb(199, 199, 199);
+}
+.apps-button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: black;
+    border-radius: 10px;
+}
+.apps-button:hover{
+    background: rgb(239, 239, 239);
+}
