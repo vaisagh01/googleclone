@@ -8,7 +8,7 @@ import {Search, Mic, ScanSearch} from 'lucide-react'
 import useGoogleSearch from '../useGoogle'
 
 function Home() {
-  const [term, setTerm] = useState(""); //search term/query
+  const [query, setQuery] = useState(""); //search term/query
   const {data} = useGoogleSearch(term); //main data from google api
 
     return (
@@ -20,7 +20,7 @@ function Home() {
 
         <img className="google-icon" src="google_logo.png" alt="google" />
 
-        <SearchInput term={term} setTerm={setTerm}/>
+        <SearchInput query={query} setQuery={setQuery}/>
 
         <p><span>New!</span> Learn more about the <a href="">Google AI Essentials</a> course, zero experience required</p>
 

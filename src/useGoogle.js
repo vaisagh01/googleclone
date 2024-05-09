@@ -5,14 +5,9 @@ const CONTEXT_KEY = "00f0fdfecbbca4cf1";
 
 const useGoogleSearch = (term) => {
   const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null); 
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true); 
-      setError(null); 
-
       try {
         const response = await fetch(
           `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${term}`
@@ -25,9 +20,7 @@ const useGoogleSearch = (term) => {
         const result = await response.json();
         setData(result);
       } catch (err) {
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
+        console.log("error:" + err);
       }
     };
 
@@ -36,7 +29,7 @@ const useGoogleSearch = (term) => {
     }
   }, [term]);
 
-  return { data, isLoading, error };
+  return { data };
 };
 
 export default useGoogleSearch;

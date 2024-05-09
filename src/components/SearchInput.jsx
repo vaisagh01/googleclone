@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router';
 import './SearchInput.css'
 
 
-function SearchInput({hidebutton, term, setTerm}) {
+function SearchInput({hidebutton, query, setQuery}) {
     const [input, setInput] = useState("");
     const nav = useNavigate();
     const search = (e) => {
       e.preventDefault();
       nav('/Search')
-      setTerm(input);
+      setQuery(input);
     }
     
     return (

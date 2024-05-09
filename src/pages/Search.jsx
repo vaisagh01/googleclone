@@ -9,7 +9,7 @@ import useGoogleSearch from '../useGoogle'
 import GoogleApps from '../components/GoogleApps'
 
 function Search() {
-  const [term, setTerm] = useState("");
+  const [query, setQuery] = useState("");
   const {data} = useGoogleSearch(term);
 
   return (
@@ -18,7 +18,7 @@ function Search() {
       <section>
         <div>
           <a href="/"><img className="google-icon-2" src="google_logo.png" alt="google" /></a>
-          <SearchInput hidebutton term={term} setTerm={setTerm}/>
+          <SearchInput hidebutton query={query} setQuery={setQuery}/>
         </div> 
         <div className="home-icons">
             <GoogleApps />
@@ -55,6 +55,7 @@ function Search() {
           }
         </div>
       }
+      
     </div>
   )
 }
